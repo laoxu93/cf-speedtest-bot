@@ -1,0 +1,53 @@
+name: Cloudflare Speed Test
+
+on:
+  schedule:
+    - cron: '0 23,8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  speedtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download CloudflareSpeedTest
+        run: |
+          curl -L -o cfst_linux_amd64.tar.gz https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/cfst_linux_amd64.tar.gz
+          tar -zxf cfst_linux_amd64.tar.gz
+          chmod +x cfst
+
+      - name: Run speed test (HTTPing, HKG/SIN/NRT/KIX)
+        run: |
+          ./cfst -httping -cfcolo HKG,SIN,NRT,KIX -n 100 -t 4 -dn 5 -dt 10 -tl 200 -tlr 1 -p 5 -o result.csv
+          ls -l result.csv
+
+      - name: Generate report
+        run: python3 scripts/report.py
+
+      - name: Commit report back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add report.md top5.json result.csv
+          git diff --cached --quiet || git commit -m "chore: update speed test result $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
+
+      - name: Upload result as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cfst-result
+          path: |
+            result.csv
+            report.md
+            top5.json
+
+      - name: Send Telegram report (optional)
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python3 scripts/telegram.py
