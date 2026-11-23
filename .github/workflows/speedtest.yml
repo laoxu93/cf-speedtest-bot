@@ -1,3 +1,4 @@
+# Router-first: router runs the test, GitHub stores the result, Workers serves the subscription.
 name: Cloudflare Speed Test
 
 on:
