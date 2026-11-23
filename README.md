@@ -4,7 +4,7 @@
 
 ## 它做什么
 
-- GitHub Actions 每天北京时间 07:00、12:00、16:00、19:00 自动跑一次测速，也支持手动触发。
+- GitHub Actions 每天北京时间 07:00、16:00 自动跑一次测速，也支持手动触发。
 - 用 [XIU2/CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest) 的 HTTPing 模式，只筛 HKG（香港）、SIN（新加坡）、NRT（东京）、KIX（大阪）四个地区，取前 5 名。
 - 每次测完把结果写回仓库：`report.md`（报告）、`top5.json`（前 5 名）、`result.csv`（完整结果）。
 - Cloudflare Worker（`workers/subscription.js`）把最新的前 5 名 IP 以纯文本 / JSON 形式提供出来。
@@ -20,9 +20,7 @@
 | 北京时间 | Cron（UTC） |
 | --- | --- |
 | 07:00 | `0 23 * * *` |
-| 12:00 | `0 4 * * *` |
 | 16:00 | `0 8 * * *` |
-| 19:00 | `0 11 * * *` |
 
 手动跑一次：仓库 → Actions → Cloudflare Speed Test → Run workflow。
 
