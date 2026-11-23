@@ -24,6 +24,7 @@ jobs:
 
       - name: Run speed test (HTTPing, HKG/SIN/NRT/KIX)
         run: |
+          cp cfst_linux_amd64/ip.txt .
           ./cfst_linux_amd64/cfst -httping -cfcolo HKG,SIN,NRT,KIX -n 100 -t 4 -dn 5 -dt 10 -tl 200 -tlr 1 -p 5 -o result.csv
           ls -l result.csv
 
