@@ -2,7 +2,7 @@
  * Cloudflare Worker: serve the latest top-5 Cloudflare IPs.
  *
  * Data source: top5.json committed to laoxu93/cf-speedtest-bot by the
- * GitHub Actions workflow (updated 07:00 / 12:00 / 16:00 / 19:00 Beijing).
+ * GitHub Actions workflow (router runs daily 05:00, synced to GitHub).
  *
  * Endpoints:
  *   /            - usage note (text)
@@ -37,7 +37,7 @@ export default {
     if (path === "/" || path === "") {
       return new Response(
         [
-          "Cloudflare 优选 IP 测速（GitHub Actions 定时测速）",
+          "Cloudflare 优选 IP 测速（N60 Pro 路由器定时测速）",
           "",
           "接口：",
           "  /top5.json  最新前 5 名 IP（JSON）",
@@ -46,7 +46,7 @@ export default {
           "",
           "注意：这里只是 IP 列表，不是可用的 VLESS/Trojan 订阅；",
           "做可用订阅还需要你自己的节点信息。",
-          "测速位置是 GitHub Actions，不是家里宽带。",
+          "测速位置是 N60 Pro 路由器（家里宽带）。",
           "",
         ].join("\n"),
         { headers: { "content-type": "text/plain; charset=utf-8" } }
@@ -78,7 +78,7 @@ export default {
       if (res.status !== 200) return res;
       const data = await res.json();
       const lines = [
-        `# Cloudflare 优选 IP（${data.generated_at || ""}，测速位置：GitHub Actions）`,
+        `# Cloudflare 优选 IP（${data.generated_at || ""}，测速位置：N60 Pro 路由器）`,
         "# 注意：仅为 IP 列表，不是可用的 VLESS/Trojan 订阅",
         "",
       ];
