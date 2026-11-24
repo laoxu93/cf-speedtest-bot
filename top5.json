@@ -1,1 +1,14 @@
-{"count":0,"generated_at":null,"location":"GitHub Actions","mode":"HTTPing","regions":["HKG","SIN","NRT","KIX"],"top5":[]}
+{
+  "count": 5,
+  "generated_at": "2026-11-24T02:01:49+08:00",
+  "location": "N60 Pro 路由器（家里宽带）",
+  "mode": "HTTPing",
+  "regions": ["HKG", "SIN", "NRT", "KIX"],
+  "top5": [
+    {"rank": 1, "ip": "162.159.0.1", "latency_ms": 107.61, "loss": 0.00, "region": "NRT"},
+    {"rank": 2, "ip": "172.67.232.61", "latency_ms": 109.16, "loss": 0.00, "region": "NRT"},
+    {"rank": 3, "ip": "172.67.239.252", "latency_ms": 111.63, "loss": 0.00, "region": "KIX"},
+    {"rank": 4, "ip": "172.67.237.82", "latency_ms": 113.02, "loss": 0.00, "region": "NRT"},
+    {"rank": 5, "ip": "172.67.228.189", "latency_ms": 115.26, "loss": 0.00, "region": "KIX"}
+  ]
+}
