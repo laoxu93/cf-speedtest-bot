@@ -1,14 +1,54 @@
 {
-  "count": 5,
-  "generated_at": "2026-11-24T16:13:18+08:00",
-  "location": "N60 Pro 路由器（家里宽带）",
+  "generated_at": "2026-11-24 19:17 UTC",
+  "location": "GitHub Actions",
+  "regions": [
+    "HKG",
+    "SIN",
+    "NRT",
+    "KIX"
+  ],
   "mode": "HTTPing",
-  "regions": ["HKG", "SIN", "NRT", "KIX"],
+  "count": 5,
   "top5": [
-    {"rank": 1, "ip": "172.67.232.4", "latency_ms": 106.80, "loss": 0.00, "region": "NRT"},
-    {"rank": 2, "ip": "188.114.96.1", "latency_ms": 106.90, "loss": 0.00, "region": "NRT"},
-    {"rank": 3, "ip": "172.67.231.155", "latency_ms": 108.86, "loss": 0.00, "region": "NRT"},
-    {"rank": 4, "ip": "172.67.238.145", "latency_ms": 112.00, "loss": 0.00, "region": "NRT"},
-    {"rank": 5, "ip": "172.67.228.82", "latency_ms": 112.06, "loss": 0.00, "region": "NRT"}
+    {
+      "rank": 1,
+      "ip": "172.67.156.230",
+      "latency_ms": 110.54,
+      "loss": 0.0,
+      "download_mbps": 0.0,
+      "region": "NRT"
+    },
+    {
+      "rank": 2,
+      "ip": "172.67.138.52",
+      "latency_ms": 110.75,
+      "loss": 0.0,
+      "download_mbps": 0.0,
+      "region": "NRT"
+    },
+    {
+      "rank": 3,
+      "ip": "172.67.184.184",
+      "latency_ms": 110.82,
+      "loss": 0.0,
+      "download_mbps": 0.0,
+      "region": "NRT"
+    },
+    {
+      "rank": 4,
+      "ip": "172.67.220.245",
+      "latency_ms": 110.87,
+      "loss": 0.0,
+      "download_mbps": 0.0,
+      "region": "NRT"
+    },
+    {
+      "rank": 5,
+      "ip": "104.21.238.105",
+      "latency_ms": 111.12,
+      "loss": 0.0,
+      "download_mbps": 0.0,
+      "region": "NRT"
+    }
   ]
 }
