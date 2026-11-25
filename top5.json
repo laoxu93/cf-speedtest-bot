@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 19:17 UTC",
+  "generated_at": "2026-11-25 05:13 UTC",
   "location": "GitHub Actions",
   "regions": [
     "HKG",
@@ -8,44 +8,12 @@
     "KIX"
   ],
   "mode": "HTTPing",
-  "count": 5,
+  "count": 1,
   "top5": [
     {
       "rank": 1,
-      "ip": "172.67.156.230",
-      "latency_ms": 110.54,
-      "loss": 0.0,
-      "download_mbps": 0.0,
-      "region": "NRT"
-    },
-    {
-      "rank": 2,
-      "ip": "172.67.138.52",
-      "latency_ms": 110.75,
-      "loss": 0.0,
-      "download_mbps": 0.0,
-      "region": "NRT"
-    },
-    {
-      "rank": 3,
-      "ip": "172.67.184.184",
-      "latency_ms": 110.82,
-      "loss": 0.0,
-      "download_mbps": 0.0,
-      "region": "NRT"
-    },
-    {
-      "rank": 4,
-      "ip": "172.67.220.245",
-      "latency_ms": 110.87,
-      "loss": 0.0,
-      "download_mbps": 0.0,
-      "region": "NRT"
-    },
-    {
-      "rank": 5,
-      "ip": "104.21.238.105",
-      "latency_ms": 111.12,
+      "ip": "172.65.90.12",
+      "latency_ms": 159.45,
       "loss": 0.0,
       "download_mbps": 0.0,
       "region": "NRT"
