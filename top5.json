@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25 18:22 UTC",
+  "generated_at": "2026-11-26 04:39 UTC",
   "location": "GitHub Actions",
   "regions": [
     "HKG",
@@ -12,11 +12,11 @@
   "top5": [
     {
       "rank": 1,
-      "ip": "172.65.90.12",
-      "latency_ms": 159.45,
+      "ip": "172.65.54.136",
+      "latency_ms": 196.29,
       "loss": 0.0,
       "download_mbps": 0.0,
-      "region": "NRT"
+      "region": "SIN"
     }
   ]
 }
