@@ -1,6 +1,6 @@
 # Cloudflare 优选 IP 测速报告
 
-- 测速时间：2026-11-26 18:03 UTC
+- 测速时间：2026-11-27 04:43 UTC
 - 测速位置：GitHub Actions
 - 测速模式：HTTPing，地区 HKG、SIN、NRT、KIX
 - 说明：这是 GitHub Runner 到 Cloudflare 的延迟，不是家里宽带的延迟；家里真实结果以路由器每天 05:00 的测速为准。
